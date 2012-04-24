@@ -27,7 +27,7 @@ import javax.swing.JTextArea;
 import javax.swing.KeyStroke;
 import javax.swing.border.EmptyBorder;
 
-import roge.encodingviewer.Main.Main;
+import roge.encodingviewer.main.Main;
 import roge.encodingviewer.resources.Resources;
 import roge.gui.RWindow;
 

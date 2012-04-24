@@ -15,6 +15,7 @@ import roge.encodingviewer.gui.basedecoders.BaseDecoder;
 import roge.encodingviewer.gui.basedecoders.BaseDecoder.ToBaseReturn;
 import roge.gui.ETextArea;
 
+
 /**
  * Input Panel designed to take in text and translate it to a given base.
  * 

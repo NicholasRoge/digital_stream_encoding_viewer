@@ -1,13 +1,10 @@
-/**
- * 
- */
 package roge.encodingviewer.gui.basedecoders;
 
 import java.util.ArrayList;
 
+
 /**
  * @author Nicholas Rogé
- *
  */
 public class AutoDetectDecoder implements BaseDecoder{
     private BaseDecoder __decoder;

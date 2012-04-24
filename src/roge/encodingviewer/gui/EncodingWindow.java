@@ -1,6 +1,3 @@
-/**
- * 
- */
 package roge.encodingviewer.gui;
 
 import java.awt.Color;
@@ -29,6 +26,7 @@ import roge.encodingviewer.gui.encodingpaneldrawers.*;
 import roge.gui.RWindow;
 import roge.encodingviewer.gui.basedecoders.*;
 
+
 /**
  * Main window;  Contains all the elements to view the Encoding graph.
  * 
@@ -37,9 +35,10 @@ import roge.encodingviewer.gui.basedecoders.*;
 public class EncodingWindow extends RWindow{    
     /**I have no idea what this is actually for, but meh.  Here's some BS documentation for it so the warning goes away.*/
     private static final long serialVersionUID = 5589396243291611297L;
-    private JRadioButtonMenuItem  __auto_detect_button;
-    private EncodingPanel __encoding_panel;
-    private EncodingInput __input_field;
+    
+    private JRadioButtonMenuItem __auto_detect_button;
+    private EncodingPanel        __encoding_panel;
+    private EncodingInput        __input_field;
     
     
     /*Begin Constructor Methods*/

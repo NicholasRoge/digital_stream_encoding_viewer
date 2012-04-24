@@ -1,6 +1,3 @@
-/**
- * 
- */
 package roge.encodingviewer.gui;
 
 import java.awt.Color;
@@ -17,6 +14,7 @@ import javax.swing.event.CaretListener;
 import roge.encodingviewer.gui.encodingpaneldrawers.*;
 import roge.gui.ETextArea.TextUpdateListener;
 
+
 /**
  * GUI based panel which displays the Encoding Graph.
  * 
@@ -25,7 +23,7 @@ import roge.gui.ETextArea.TextUpdateListener;
 public class EncodingPanel extends JPanel implements TextUpdateListener,CaretListener{
     /*Begin Constants*/
     /**I have no idea what this is actually for, but meh.  Here's some BS documentation for it so the warning goes away.*/
-    private static final long serialVersionUID = 6715060991592690674L;
+    private static final long serialVersionUID = 4950181444531553226L;
     
     /**"Error" occurs when there are no bits in the bitstream to read.*/
     public static final int NO_INPUT=0x1;
@@ -36,14 +34,14 @@ public class EncodingPanel extends JPanel implements TextUpdateListener,CaretLis
     
     /*Begin Variables*/
     private ArrayList<Boolean> __bitstream=new ArrayList<Boolean>();
-    private EncodingDrawer __drawer=null;
-    private int __error_code=0;
-    private int __error_count=0;
-    private int __selection_start;
-    private int __selection_length;
-    private boolean __bit_stuffing_enabled=false;
-    private boolean __axes_enabled=true;
-    private boolean __bit_interval_markers_enabled=true;
+    private EncodingDrawer     __drawer=null;
+    private int                __error_code=0;
+    private int                __error_count=0;
+    private int                __selection_start;
+    private int                __selection_length;
+    private boolean            __bit_stuffing_enabled=false;
+    private boolean            __axes_enabled=true;
+    private boolean            __bit_interval_markers_enabled=true;
     /*End Variables*/
     
     

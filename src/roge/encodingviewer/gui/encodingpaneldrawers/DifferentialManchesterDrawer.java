@@ -1,23 +1,15 @@
-/**
- * 
- */
 package roge.encodingviewer.gui.encodingpaneldrawers;
 
-import java.awt.Color;
 import java.awt.Graphics2D;
 import java.awt.Point;
 import java.awt.geom.Line2D;
 import java.util.ArrayList;
 
-import roge.encodingviewer.gui.EncodingPanel;
 
 /**
  * @author Nicholas Rogé
  */
 public class DifferentialManchesterDrawer extends ManchesterDrawer{
-    public static final int CANVAS_LEFT_PADDING=10;
-
-
     @Override public void drawBits(Graphics2D canvas,int canvas_width,int canvas_height,Point origin,ArrayList<Boolean> bits){
         canvas_width-=CANVAS_LEFT_PADDING;
         

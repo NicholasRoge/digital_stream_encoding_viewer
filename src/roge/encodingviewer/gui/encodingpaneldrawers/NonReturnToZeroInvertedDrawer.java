@@ -1,22 +1,16 @@
-/**
- * 
- */
 package roge.encodingviewer.gui.encodingpaneldrawers;
 
-import java.awt.Color;
 import java.awt.Graphics2D;
 import java.awt.Point;
 import java.awt.geom.Line2D;
 import java.util.ArrayList;
 
-import roge.encodingviewer.gui.EncodingPanel;
 
 /**
  * @author Nicholas Rogé
  */
 public class NonReturnToZeroInvertedDrawer extends NonReturnToZeroDrawer{
-    public static final int CANVAS_LEFT_PADDING=10;
-
+    /*Begin Overridden Methods*/
     @Override public void drawBits(Graphics2D canvas,int canvas_width,int canvas_height,Point origin,ArrayList<Boolean> bits){
         boolean inversion_toggle=false;
         
@@ -52,4 +46,5 @@ public class NonReturnToZeroInvertedDrawer extends NonReturnToZeroDrawer{
     @Override public String getName(){
         return "Non-Return to Zero";
     }
+    /*End Overridden Methods*/
 }

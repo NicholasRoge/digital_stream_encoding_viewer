@@ -1,13 +1,11 @@
-/**
- * 
- */
 package roge.encodingviewer.gui.basedecoders;
+
 
 /**
  * @author Nicholas Rogé
- *
  */
 public class OctalDecoder implements BaseDecoder{
+    /*Begin Overridden Methods*/
     @Override public String toBinary(String number_string,int padding_bits){
         final int unit_size=3;
         
@@ -78,4 +76,5 @@ public class OctalDecoder implements BaseDecoder{
         
         return true;
     }
+    /*End Overridden Methods*/
 }

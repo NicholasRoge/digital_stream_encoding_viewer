@@ -1,13 +1,11 @@
-/**
- * 
- */
 package roge.encodingviewer.gui.basedecoders;
+
 
 /**
  * @author Nicholas Rogé
- *
  */
 public class BinaryDecoder implements BaseDecoder{
+    /*Begin Overridden Methods*/
     @Override public String toBinary(String number_string,int padding_bits){
         return number_string;
     }
@@ -33,4 +31,5 @@ public class BinaryDecoder implements BaseDecoder{
         
         return true;
     }
+    /*End Overridden Methods*/
 }

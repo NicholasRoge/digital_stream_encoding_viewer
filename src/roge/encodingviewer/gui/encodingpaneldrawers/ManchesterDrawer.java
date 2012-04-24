@@ -1,6 +1,3 @@
-/**
- * 
- */
 package roge.encodingviewer.gui.encodingpaneldrawers;
 
 import java.awt.Color;
@@ -9,14 +6,12 @@ import java.awt.Point;
 import java.awt.geom.Line2D;
 import java.util.ArrayList;
 
-import roge.encodingviewer.gui.EncodingPanel;
 
 /**
  * @author Nicholas Rogé
  */
 public class ManchesterDrawer extends GeneralDrawer{
-    public static final int CANVAS_LEFT_PADDING=10;
-    
+    /*Begin Overridden Methods*/
     @Override public void drawAxes(Graphics2D canvas,int canvas_width,int canvas_height,Point origin){
         canvas_width-=CANVAS_LEFT_PADDING;
         
@@ -59,19 +54,11 @@ public class ManchesterDrawer extends GeneralDrawer{
     }
     
     @Override public void highlightSelectedBits(Graphics2D canvas,int canvas_width,int canvas_height,Point origin,ArrayList<Boolean> bitstream,int start_index,int selection_length){
-        /*int x=origin.x+CANVAS_LEFT_PADDING+10;
-        int y=origin.y;
-        int width=0;
-        int height=origin.y+canvas_height;
-        
-        
-        x=(int)Math.ceil(((double)(start_index)/(double)bitstream.size())*(canvas_width-10));
-        width=(int)Math.ceil(((double)(start_index+selection_length)/(double)bitstream.size())*(canvas_width-10))-x;
-        
-        canvas.fillRect(x,y,width,height);*/
+        //Nothing here yet!
     }
     
     @Override public String getName(){
         return "Manchester";
     }
+    /*End Overridden Methods*/
 }

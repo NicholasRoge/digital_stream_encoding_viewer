@@ -1,4 +1,4 @@
-package roge.encodingviewer.Main;
+package roge.encodingviewer.main;
 
 import java.awt.Dimension;
 import roge.encodingviewer.gui.EncodingWindow;
@@ -7,9 +7,9 @@ import roge.encodingviewer.resources.Resources;
 /**
  * Main class for the program...  Literally!<br />
  * ...<br />
- * Yes my jokes are lame...  Leave me along.
+ * Yes my jokes are lame...  Leave me alone.
  * 
- * @author Nicholas RogÃ©
+ * @author Nicholas Rogé
  */
 public class Main{
     private static EncodingWindow __window=null;

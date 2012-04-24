@@ -1,12 +1,11 @@
-/**
- * 
- */
 package roge.encodingviewer.gui.basedecoders;
+
 
 /**
  * @author Nicholas Rogé
  */
 public class HexadecimalDecoder implements BaseDecoder{
+    /*Begin Overridden Methods*/
     @Override public String toBinary(String number_string,int padding_bits){
         final int unit_size=4;
         
@@ -77,4 +76,5 @@ public class HexadecimalDecoder implements BaseDecoder{
         
         return true;
     }
+    /*End Overridden Methods*/
 }

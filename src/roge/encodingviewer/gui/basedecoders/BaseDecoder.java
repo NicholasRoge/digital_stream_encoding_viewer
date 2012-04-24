@@ -1,6 +1,9 @@
 package roge.encodingviewer.gui.basedecoders;
 
+
 /**
+ * Class intent is to provide an interface for the converting of a string of numbers from one base to another.
+ * 
  * @author Nicholas Rogé
  */
 public interface BaseDecoder{

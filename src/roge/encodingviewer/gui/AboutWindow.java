@@ -1,6 +1,3 @@
-/**
- * 
- */
 package roge.encodingviewer.gui;
 
 import java.awt.Color;

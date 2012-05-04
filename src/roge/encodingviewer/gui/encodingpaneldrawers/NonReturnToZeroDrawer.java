@@ -13,19 +13,21 @@ import java.util.ArrayList;
 public class NonReturnToZeroDrawer extends GeneralDrawer{
     /*Begin Overridden Methods*/    
     @Override public void drawAxes(Graphics2D canvas,int canvas_width,int canvas_height,Point origin){
-        canvas_width-=NonReturnToZeroDrawer.CANVAS_LEFT_PADDING;
+        canvas_width-=CANVAS_LEFT_PADDING;
         
         /*Add the graph lines*/
         canvas.setPaint(Color.BLACK);
         
         /*Y Axis*/
-        canvas.draw(new Line2D.Double(new Point(origin.x+NonReturnToZeroDrawer.CANVAS_LEFT_PADDING,origin.y),new Point(origin.x+NonReturnToZeroDrawer.CANVAS_LEFT_PADDING+10,origin.y)));
-        canvas.draw(new Line2D.Double(new Point(origin.x+NonReturnToZeroDrawer.CANVAS_LEFT_PADDING+10,origin.y),new Point(origin.x+NonReturnToZeroDrawer.CANVAS_LEFT_PADDING+10,origin.y+canvas_height)));
-        canvas.drawString("+V",origin.x+NonReturnToZeroDrawer.CANVAS_LEFT_PADDING-canvas.getFontMetrics().stringWidth("+V"),origin.y+canvas.getFontMetrics().getHeight());
-        canvas.drawString("0V",origin.x+NonReturnToZeroDrawer.CANVAS_LEFT_PADDING-canvas.getFontMetrics().stringWidth("0V"),origin.y+canvas_height);
+        canvas.draw(new Line2D.Double(new Point(origin.x+CANVAS_LEFT_PADDING,origin.y),new Point(origin.x+CANVAS_LEFT_PADDING+10,origin.y)));
+        canvas.draw(new Line2D.Double(new Point(origin.x+CANVAS_LEFT_PADDING,origin.y+canvas_height),new Point(origin.x+CANVAS_LEFT_PADDING+10,origin.y+canvas_height)));
+        canvas.draw(new Line2D.Double(new Point(origin.x+CANVAS_LEFT_PADDING+10,origin.y),new Point(origin.x+CANVAS_LEFT_PADDING+10,origin.y+canvas_height)));
+        canvas.drawString("+V",origin.x+CANVAS_LEFT_PADDING-canvas.getFontMetrics().stringWidth("+V"),origin.y+canvas.getFontMetrics().getHeight());
+        canvas.drawString("0V",origin.x+CANVAS_LEFT_PADDING-canvas.getFontMetrics().stringWidth("0V"),origin.y+(canvas_height/2)+(canvas.getFontMetrics().getHeight()/2));
+        canvas.drawString("-V",origin.x+CANVAS_LEFT_PADDING-canvas.getFontMetrics().stringWidth("-V"),origin.y+canvas_height);
         
         /*X Axis*/
-        canvas.draw(new Line2D.Double(new Point(origin.x+NonReturnToZeroDrawer.CANVAS_LEFT_PADDING,origin.y+canvas_height),new Point(origin.x+NonReturnToZeroDrawer.CANVAS_LEFT_PADDING+canvas_width,origin.y+canvas_height)));
+        canvas.draw(new Line2D.Double(new Point(origin.x+CANVAS_LEFT_PADDING+10,origin.y+(canvas_height/2)),new Point(origin.x+CANVAS_LEFT_PADDING+canvas_width,origin.y+(canvas_height/2))));
     }
 
     @Override public void drawBits(Graphics2D canvas,int canvas_width,int canvas_height,Point origin,ArrayList<Boolean> bits){

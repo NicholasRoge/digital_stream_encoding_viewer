@@ -163,19 +163,29 @@ public class EncodingWindow extends RWindow{
                 encoding_mode=new JMenu("Encoding Mode");
                 encoding_mode.setMnemonic('m');
                 button_group=new ButtonGroup();
-                    radiobutton_menu_item=new JRadioButtonMenuItem("Non-Return to Zero");
+                    radiobutton_menu_item=new JRadioButtonMenuItem("Unipolar");
                     radiobutton_menu_item.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_1,ActionEvent.CTRL_MASK));
                     radiobutton_menu_item.addItemListener(new ItemListener(){
                         @Override public void itemStateChanged(ItemEvent event){
-                            EncodingWindow.this.getEncodingPanel().changeEncodingDrawer(new NonReturnToZeroDrawer());                        
+                            EncodingWindow.this.getEncodingPanel().changeEncodingDrawer(new UnipolarDrawer());                        
                         }
                     });
                     encoding_mode.add(radiobutton_menu_item);
                     radiobutton_menu_item.setSelected(true);
                     button_group.add(radiobutton_menu_item);
                     
-                    radiobutton_menu_item=new JRadioButtonMenuItem("Non-Return to Zero Inverted");
+                    radiobutton_menu_item=new JRadioButtonMenuItem("Non-Return to Zero");
                     radiobutton_menu_item.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_2,ActionEvent.CTRL_MASK));
+                    radiobutton_menu_item.addItemListener(new ItemListener(){
+                        @Override public void itemStateChanged(ItemEvent event){
+                            EncodingWindow.this.getEncodingPanel().changeEncodingDrawer(new NonReturnToZeroDrawer());                        
+                        }
+                    });
+                    encoding_mode.add(radiobutton_menu_item);
+                    button_group.add(radiobutton_menu_item);
+                    
+                    radiobutton_menu_item=new JRadioButtonMenuItem("Non-Return to Zero Inverted");
+                    radiobutton_menu_item.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_3,ActionEvent.CTRL_MASK));
                     radiobutton_menu_item.addItemListener(new ItemListener(){
                         @Override public void itemStateChanged(ItemEvent event){
                             EncodingWindow.this.getEncodingPanel().changeEncodingDrawer(new NonReturnToZeroInvertedDrawer());                        
@@ -185,7 +195,7 @@ public class EncodingWindow extends RWindow{
                     button_group.add(radiobutton_menu_item);
                         
                     radiobutton_menu_item=new JRadioButtonMenuItem("Return to Zero");
-                    radiobutton_menu_item.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_3,ActionEvent.CTRL_MASK));
+                    radiobutton_menu_item.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_4,ActionEvent.CTRL_MASK));
                     radiobutton_menu_item.addItemListener(new ItemListener(){
                         @Override public void itemStateChanged(ItemEvent event){
                             EncodingWindow.this.getEncodingPanel().changeEncodingDrawer(new ReturnToZeroDrawer());
@@ -195,7 +205,7 @@ public class EncodingWindow extends RWindow{
                     button_group.add(radiobutton_menu_item);
                     
                     radiobutton_menu_item=new JRadioButtonMenuItem("Machester");
-                    radiobutton_menu_item.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_4,ActionEvent.CTRL_MASK));
+                    radiobutton_menu_item.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_5,ActionEvent.CTRL_MASK));
                     radiobutton_menu_item.addItemListener(new ItemListener(){
                         @Override public void itemStateChanged(ItemEvent event){
                             EncodingWindow.this.getEncodingPanel().changeEncodingDrawer(new ManchesterDrawer());
@@ -205,7 +215,7 @@ public class EncodingWindow extends RWindow{
                     button_group.add(radiobutton_menu_item);
                     
                     radiobutton_menu_item=new JRadioButtonMenuItem("Differential Machester");
-                    radiobutton_menu_item.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_5,ActionEvent.CTRL_MASK));
+                    radiobutton_menu_item.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_6,ActionEvent.CTRL_MASK));
                     radiobutton_menu_item.addItemListener(new ItemListener(){
                         @Override public void itemStateChanged(ItemEvent event){
                             EncodingWindow.this.getEncodingPanel().changeEncodingDrawer(new DifferentialManchesterDrawer());
